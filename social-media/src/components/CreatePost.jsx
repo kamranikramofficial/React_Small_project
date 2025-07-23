@@ -15,7 +15,7 @@ const CreatePost = () => {
     const userId = userIdElement.current.value;
     const postTitle = postTitleElement.current.value;
     const postBody = postBodyElement.current.value;
-    const reactions = reactionsElement.current.value;
+    const reactionsCount = parseInt(reactionsElement.current.value); // Convert to number
     const tags = tagsElement.current.value.split(" ");
 
     userIdElement.current.value = "";
@@ -24,7 +24,7 @@ const CreatePost = () => {
     reactionsElement.current.value = "";
     tagsElement.current.value = "";
 
-    addPost(userId, postTitle, postBody, reactions, tags);
+    addPost(userId, postTitle, postBody, reactionsCount, tags);
   };
 
   return (
